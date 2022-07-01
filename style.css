@@ -1,0 +1,86 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: calibri;
+}
+
+body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     background-color: #2f363e;
+}
+
+#time {
+     display: flex;
+     gap: 40px;
+     color: #fff;
+     position: relative;
+}
+
+.ap {
+     position: absolute;
+     right: 0;
+     font-size: 18px;
+}
+
+#time .circle {
+     width: 150px;
+     height: 150px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 32px;
+     position: relative;
+}
+
+#time div {
+     position: absolute;
+     text-align: center;
+}
+
+#time .circle svg {
+     width: 150px;
+     height: 150px;
+     display: flex;
+     transform: rotate(270deg);
+}
+
+.circle svg circle {
+     width: 100%;
+     height: 100%;
+     fill: transparent;
+     stroke: #191919;
+     stroke-width: 4;
+     transform: translate(15px, 15px);
+     position: relative;
+     z-index: 1;
+}
+
+#time .circle svg circle:nth-child(2) {
+     stroke: var(--clr);
+     stroke-dasharray: 380;
+}
+
+.dot {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1;
+}
+
+.dot::before {
+     content: '';
+     width: 10px;
+     height: 10px;
+     background-color: var(--clr);
+     border-radius: 50%;
+     position: absolute;
+     top: 10px;
+     box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr);
+}
